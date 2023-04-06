@@ -26,6 +26,8 @@
 .avatar {
     border-radius: 50%;
     border: 2px solid;
+    padding: 4px;
+    background-color: #A8A8A8;
 }
 
 .name {
