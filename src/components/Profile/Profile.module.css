@@ -1,7 +1,5 @@
 
 .profile {
-    /* outline: 1px dashed tomato; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,10 +39,7 @@
     color: #5F6775;
 }
 
-
-
 .stats {
-    /* outline: 1px dashed teal; */
 
     display: flex;
     justify-content: space-around;
@@ -59,15 +54,10 @@
     align-items: center;
     gap: 4px;
 
-    /* padding: 20px; */
     padding-top: 16px;
     padding-bottom: 16px;
 
 }
-
-/* .stats li:not(:last-child) {
-    border-right: 1px solid gray;
-} */
 
 .label {
     font-style: initial;

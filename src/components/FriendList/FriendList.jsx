@@ -1,25 +1,23 @@
 import PropTypes from 'prop-types';
 import css from 'components/FriendList/FriendList.module.css';
+import { FriendListItem } from './FriendListItem/FriendListItem';
 
 export const FriendList = ({friends}) => {
     return (
         <ul className={css.friendList}>
-        
+
         {
-        friends.map(({avatar, name, isOnline, id}) => {        
-            const userStatus = isOnline ? 
-            `${css.online} ${css.status}`
-            : `${css.offline} ${css.status}`;
-     
-            return (
-                <li className={css.item} key={id}>
-                    <span className={userStatus}></span>
-                    <img src={avatar} alt="User avatar" className={css.avatar} width={48}/>
-                    <p className={css.name}>{name}</p>
-                </li>
-            )
-        })
+        friends.map((friend) => 
+        <FriendListItem
+        id = {friend.id}
+        avatar= {friend.avatar}
+        name= {friend.name}
+        isOnline = {friend.isOnline}
+        key = {friend.id}
+        />
+        )
       }
+
       </ul>
     )
 }
@@ -30,5 +28,5 @@ FriendList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool,
       id: PropTypes.number.isRequired,
-    }).isRequired).isRequired
+    })).isRequired
 }
